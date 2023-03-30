@@ -51,7 +51,7 @@ function isRainbow(colors:string[]){
 
 // isRainbow(["Rojo", "Negro", "Blanco", "Amarillo", "Verde Fosforito"])
 
-function add(myWords:string[]):number{
+export function add(myWords:string[]):number{
 
     let wordsNum:number = 0
 

@@ -98,7 +98,7 @@ function continent(country:string){
 
 }
 
-function isEven(number:number){
+export function isEven(number:number){
 
     if( number % 2 == 0){
 
