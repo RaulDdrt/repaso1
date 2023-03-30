@@ -37,5 +37,22 @@ export class Point {
 
     }
 
+    distanceTolOrigin():number{
+
+        return Math.sqrt((this.x * this.x) + (this.y * this.y))
+    }
+
+    calculateDistance(anotherPoint:Point):number{
+
+        let restx = this.x - anotherPoint.x
+        let resty = this.y - anotherPoint.y
+
+        return Math.sqrt((restx * restx) +(resty * resty))
+
+
+    }
+
+    
+
 }
 
