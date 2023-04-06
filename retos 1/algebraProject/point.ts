@@ -52,7 +52,7 @@ export class Point {
 
     }
 
-    calcularQuadrant():number {
+    calcularQuadrant() {
 
         if ( this.x == 0 && this.y == 0){
 
@@ -74,7 +74,7 @@ export class Point {
             return 3
         }
 
-        else ( this.x > 0 && this.y < 0 ){
+        else if( this.x > 0 && this.y < 0 ){
 
             return 4
         }
@@ -82,6 +82,31 @@ export class Point {
 
     }
 
-    
+    calculateNearest(points:Point[]){
+
+        let emparr:number[] = []
+
+        for ( let i = 0; i < points.length; i++ ){
+
+            // points[i].calculateDistance(mypoint:Point)
+            let coso = this.calculateDistance(points[i])
+            
+            emparr.push(coso)
+
+        }
+
+        let pequeño = Math.min(...emparr)
+
+        for ( let i = 0; i < emparr.length; i++){
+
+            if (pequeño == emparr[i]){
+
+                return points[i]
+            }
+
+
+        }
+
+    }
 
 }
